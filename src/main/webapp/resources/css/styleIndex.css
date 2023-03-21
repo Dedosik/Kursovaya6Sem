@@ -1,0 +1,40 @@
+.container{
+    height: 75px;
+    width: 100%;
+    background:linear-gradient(81deg,black,orange);
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.logo{
+    position: relative;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.list_links{
+    list-style: none;
+    display: flex;
+}
+.list_links li{
+    margin-left: 10px;
+    font-size: 15px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://phonoteka.org/uploads/posts/2022-01/1643147648_1-phonoteka-org-p-chernii-fon-dlya-saita-1.jpg") ;
+}
+
