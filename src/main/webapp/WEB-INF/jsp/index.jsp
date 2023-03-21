@@ -7,20 +7,37 @@
 <head>
   <title>Главная</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/style.css">
+  <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/styleIndex.css">
 </head>
 <body>
-<div>
-  <h3>${pageContext.request.userPrincipal.name}</h3>
-  <sec:authorize access="!isAuthenticated()">
-    <h4><a href="/login">Войти</a></h4>
-    <h4><a href="/registration">Зарегистрироваться</a></h4>
-  </sec:authorize>
-  <sec:authorize access="isAuthenticated()">
-    <h4><a href="/logout">Выйти</a></h4>
-  </sec:authorize>
-  <h4><a href="/news">Новости (только пользователь)</a></h4>
-  <h4><a href="/admin">Пользователи (только админ)</a></h4>
+<div class="container">
+  <div class="logo">
+    <img src="https://avatars.mds.yandex.net/get-ott/1672343/2a000001706322b7aab311a80769a58e93d4/960x540">
+  </div>
+  <div class="content">
+    <ul class="list_links">
+      <li><span>${pageContext.request.userPrincipal.name}</span></li>
+      <sec:authorize access="!isAuthenticated()">
+        <li><a href="/login">Войти</a></li>
+        <li><a href="/registration">Зарегистрироваться</a></li>
+      </sec:authorize>
+      <li><sec:authorize access="isAuthenticated()">
+        <a href="/logout">Выйти</a>
+      </sec:authorize></li>
+      <sec:authorize access="hasAnyRole('ADMIN')">
+      <li><a href="/add">Добавить</a></li>
+      </sec:authorize>
+      <sec:authorize access="hasAnyRole('ADMIN')">
+      <li><a href="/admin">Пользователи</a></li>
+      </sec:authorize>
+      <sec:authorize access="hasAnyRole('USER')">
+        <li><a href="/watch">Просмотренное</a></li>
+      </sec:authorize>
+    </ul>
+  </div>
 </div>
+<style>
+
+</style>
 </body>
 </html>
