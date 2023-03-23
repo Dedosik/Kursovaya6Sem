@@ -7,7 +7,7 @@
 }
 img{
     height: 40px;
-    width: 150px;
+    width: 350px;
     position: absolute;
     left: 0;
     top: 0;
@@ -37,4 +37,113 @@ body{
     padding: 0;
     background-image: url("https://phonoteka.org/uploads/posts/2022-01/1643147648_1-phonoteka-org-p-chernii-fon-dlya-saita-1.jpg") ;
 }
+.wrapper{
+
+}
+.wrapper-active{
+    margin-left: 300px;
+}
+.menu{
+    position: fixed;
+    margin-left: -204px;
+    left: 0;
+    top: 75px;
+    width: 204px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    transition: all ease 1s;
+}
+#menu.nav-active{
+    margin-left: 0;
+}
+.menu-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+}
+.menu-list a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.c-hamburger{
+    display: block;
+    position: absolute;
+    right: -96px;
+    top: 10px;
+    overflow: hidden;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+.c-hamburger:focus{
+    outline: none;
+}
+.c-hamburger span{
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: #fff;
+}
+.c-hamburger span::before, .c-hamburger span::after{
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    content: "";
+}
+.c-hamburger span::before{
+    top:-20px;
+}
+.c-hamburger span::after{
+    bottom: -20px;
+}
+.c-hamburger-line{
+    background: #FF8C00;
+}
+.c-hamburger-line span{
+    transition: background 0s 0.3s;
+}
+.c-hamburger-line span::before, .c-hamburger-line span::after{
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+.c-hamburger-line span::before{
+    transition-property: top, transform;
+}
+.c-hamburger-line span::after{
+    transition-property: bottom, transform;
+}
+.c-hamburger-line.is-active{
+    background: #2F4F4F;
+}
+.c-hamburger-line.is-active span{
+    background: none;
+}
+.c-hamburger-line.is-active span::before{
+    top: 0;
+    transform: rotate(-45deg);
+}
+.c-hamburger-line.is-active span:after{
+    bottom: 0;
+    transform: rotate(45deg);
+}
+.c-hamburger-line.is-active span::before, .c-hamburger-line.is-active span:after{
+    transition-delay: 0s, 0.3s;
+}
+
+
 

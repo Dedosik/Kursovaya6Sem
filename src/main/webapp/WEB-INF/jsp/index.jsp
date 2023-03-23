@@ -12,7 +12,7 @@
 <body>
 <div class="container">
   <div class="logo">
-    <img src="https://avatars.mds.yandex.net/get-ott/1672343/2a000001706322b7aab311a80769a58e93d4/960x540">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Kinopoisk_logo_orange.png">
   </div>
   <div class="content">
     <ul class="list_links">
@@ -36,8 +36,42 @@
     </ul>
   </div>
 </div>
+<div class="wrapper">
+  <div id="menu" class="menu">
+    <button class="c-hamburger c-hamburger-line">
+      <span>Menu</span>
+    </button>
+    <nav class="menu-list">
+      <a href="/">Главная</a>
+      <a href="#">Фильмы</a>
+      <a href="#">Сериалы</a>
+      <a href="#">Мультфильмы</a>
+    </nav>
+  </div>
+</div>
 <style>
 
 </style>
+
+
+
+
+
+<script>
+ document.querySelector('.c-hamburger').addEventListener('click', function (e){
+   e.preventDefault();
+   // this.classList.toggle('is-active')
+   if(this.classList.contains('is-active')){
+     this.classList.remove('is-active');
+     document.querySelector('#menu').classList.remove('nav-active');
+     document.body.classList.remove('body-active')
+   }
+   else{
+     this.classList.add('is-active');
+     document.querySelector('#menu').classList.add('nav-active');
+     document.querySelector('.wrapper').classList.add('wrapper-active')
+   }
+ })
+</script>
 </body>
 </html>
