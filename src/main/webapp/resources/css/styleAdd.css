@@ -1,0 +1,35 @@
+body{
+    background-image: url("https://w-dog.ru/wallpapers/3/36/332438636672669.jpg");
+}
+.container{
+    margin: 100px auto;
+    height: 450px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    border-radius: 25px;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+}
+.container select{
+    max-width: 200px;
+}
+.container input{
+    background-color: #212121;
+    max-width: 350px;
+    height: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.container input:focus{
+    color: rgb(255, 128, 0);
+    background-color: #212121;
+    outline-color: rgb(255, 128, 0);
+    box-shadow: -3px -3px 15px rgb(255, 128, 0);
+    transition: .1s;
+    transition-property: box-shadow;
+}

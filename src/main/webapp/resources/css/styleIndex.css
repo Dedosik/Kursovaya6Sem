@@ -35,7 +35,10 @@ img{
 body{
     margin: 0;
     padding: 0;
-    background-image: url("https://phonoteka.org/uploads/posts/2022-01/1643147648_1-phonoteka-org-p-chernii-fon-dlya-saita-1.jpg") ;
+    /*background-image: url("https://phonoteka.org/uploads/posts/2022-01/1643147648_1-phonoteka-org-p-chernii-fon-dlya-saita-1.jpg") ;*/
+}
+.pageContent{
+    margin-left: 150px;
 }
 .wrapper{
 

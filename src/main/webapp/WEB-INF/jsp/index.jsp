@@ -16,6 +16,11 @@
   </div>
   <div class="content">
     <ul class="list_links">
+      <form action="/" method="get">
+        <li><button>Поиск</button></li>
+        <li><input type="text" name="title" class="input_head" placeholder="название фильма"></li>
+      </form>
+
       <li><span>${pageContext.request.userPrincipal.name}</span></li>
       <sec:authorize access="!isAuthenticated()">
         <li><a href="/login">Войти</a></li>
@@ -49,18 +54,20 @@
     </nav>
   </div>
 </div>
-<style>
-
-</style>
-
-
-
+<div class="pageContent">
+  <h1>ПРИВЕТ</h1><hr>
+  <c:forEach var="kinofilm" items="${kinofilms}">
+    <div class="content-box">
+      <p>${kinofilm.name} ${kinofilm.type} | <a href="/index/${kinofilm.id}">Подробнее...</a></p>
+    </div>
+  </c:forEach>
+</div>
 
 
 <script>
  document.querySelector('.c-hamburger').addEventListener('click', function (e){
    e.preventDefault();
-   // this.classList.toggle('is-active')
+
    if(this.classList.contains('is-active')){
      this.classList.remove('is-active');
      document.querySelector('#menu').classList.remove('nav-active');
